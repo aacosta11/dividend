@@ -11,7 +11,7 @@
 
 <body>
     <style>
-        * {margin: 0; padding: 0;}
+        * {margin: 0; padding: 0;font-family: sans-serif;}
         .img {
             transition: .15s ease;
             width: 100px;
@@ -20,6 +20,11 @@
         .img:hover {
             transform: scale(101%);
             box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+        }
+        .imgBig {
+            width: 300px;
+            height: 300px;
+            transition: .3s ease;
         }
         .container {
             width: auto;
@@ -47,14 +52,92 @@
         #previewBackdrop {
             position: fixed;
             z-index: 5;
+            top: 5rem;
         }
         #bigPreview {
-            
+            margin: 0 auto 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+        #exitBig {
+            position: relative;
+            margin: 1rem auto 0 auto;
+            width: 100px;
+            height: 100px;
+            border: 3px solid red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: .3s ease;
+        }
+        #exitBig:hover {
+            transform: scale(105%);
+        }
+        #exit1 {
+            width: 50px;
+            height: 50px;
+            transform: rotate(45deg);
+            border-right: 3px solid red;
+            border-top: 3px solid red;
+            margin-left: -.75rem;
+        }
+        #exit2 {
+            width: 50px;
+            height: 50px;
+            transform: rotate(-45deg);
+            border-left: 3px solid red;
+            border-top: 3px solid red;
+            margin-right: -.75rem;
+        }
+        .flipflop {
+            width: 20px;
+            height: 20px;
+            border: 3px solid black;
+            border-radius: 50%;
+        }
+        #previewFront {
+            background-color: black;
+        }
+        .linkContainer {
+            display: flex;
+            column-gap: 1rem;
+            justify-content: center;
+        }
+        #link {
+            width: 10px;
+            height: 10px;
+            border-top: 10px solid black;
+            border-right: 10px solid blue;
+            transition: .3s ease;
+        }
+        #link:hover {
+            transform: scale(110%);
+            border-top: 10px solid blue;
+            border-right: 10px solid black;
         }
     </style>
+    <!-- more detailed preview -->
     <div class="cover" id="previewBackdrop" style="display: none">
+        <div class="linkContainer">
+            <h1>dividendapparel.com</h1>
+            <div id="link" onclick="goToStore(this)"></div>
+        </div>
         <div id="bigPreview">
-
+            <img id="bigPreviewImg" src="./img/hoodie/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
+            class="imgBig" name="buy-and-hold-november-2021?product=212&variant=5819&size=1168"
+            >
+            <div style="display:flex;column-gap:1rem;">
+                <div class="flipflop" id="previewFront" aria-checked="true" onclick="flipflop(this)"></div>
+                <div class="flipflop" id="previewBack" onclick="flipflop(this)"></div>
+            </div>
+        </div>
+        <!-- big X -->
+        <div id="exitBig" onclick="exitBigPreview(this)">
+            <div id="exit1"></div>
+            <div id="exit2"></div>
         </div>
     </div>
     <div id="cover" class="cover">
@@ -62,7 +145,7 @@
         <div class="container">
             <div class="item">
                 <img src="./img/hoodie/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
-                class="img" id="buy-and-hold-november-2021?product=212&variant=5819&size=1168"
+                class="img" name="buy-and-hold-november-2021?product=212&variant=5819&size=1168"
                 onmouseover="preview(this)"
                 onmouseout="exitPreview(this)"
                 onclick="biggerPreview(this)"
