@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' href='style.css' />
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {margin: 0; padding: 0;}
+        .img {
+            transition: .15s ease;
+            width: 100px;
+            height: 100px;
+        }
+        .img:hover {
+            transform: scale(101%);
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            width: auto;
+            max-width: 70vw;
+            margin: 0 auto;
+            -ms-display: -ms-grid;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            row-gap: 1rem;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media only screen and (max-width: 425px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .cover {
+            width: 100vw;
+            height: 100vh;
+        }
+        #previewBackdrop {
+            position: fixed;
+            z-index: 5;
+        }
+        #bigPreview {
+            
+        }
+    </style>
+    <div class="cover" id="previewBackdrop" style="display: none">
+        <div id="bigPreview">
+
+        </div>
+    </div>
+    <div id="cover" class="cover">
+        <h1>Dividend Apparel Preview!</h1>
+        <div class="container">
+            <div class="item">
+                <img src="./img/hoodie/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
+                class="img" id="buy-and-hold-november-2021?product=212&variant=5819&size=1168"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
