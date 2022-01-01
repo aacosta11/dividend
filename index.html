@@ -126,8 +126,8 @@
             <div id="link" onclick="goToStore(this)"></div>
         </div>
         <div id="bigPreview">
-            <img id="bigPreviewImg" src="./img/hoodie/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
-            class="imgBig" name="buy-and-hold-november-2021?product=212&variant=5819&size=1168"
+            <img id="bigPreviewImg" src="" alt="large preview" class="imgBig" 
+            name="" aria-label="" aria-details=""
             >
             <div style="display:flex;column-gap:1rem;">
                 <div class="flipflop" id="previewFront" aria-checked="true" onclick="flipflop(this)"></div>
@@ -142,10 +142,137 @@
     </div>
     <div id="cover" class="cover">
         <h1>Dividend Apparel Preview!</h1>
+        <p>&nbsp;</p>
         <div class="container">
+            <!-- BUY AND HOLD HOODIES -->
             <div class="item">
                 <img src="./img/hoodie/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
-                class="img" name="buy-and-hold-november-2021?product=212&variant=5819&size=1168"
+                class="img" id="buy-and-hold-november-2021?product=212&variation=5819&size=1168" name="hoodie/buy_and_hold" aria-label="black"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/hoodie/buy_and_hold/royal/front.jpg" alt="buy-and-hold-royal" 
+                class="img" id="buy-and-hold-november-2021?product=212&variation=5823&size=1168" name="hoodie/buy_and_hold" aria-label="royal"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/hoodie/buy_and_hold/maroon/front.jpg" alt="buy-and-hold-maroon" 
+                class="img" id="buy-and-hold-november-2021?product=212&variation=5833&size=1168" name="hoodie/buy_and_hold" aria-label="maroon"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/hoodie/buy_and_hold/carolina_blue/front.jpg" alt="buy-and-hold-carolina-blue" 
+                class="img" id="buy-and-hold-november-2021?product=212&variation=5839&size=1168" name="hoodie/buy_and_hold" aria-label="carolina_blue"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/hoodie/buy_and_hold/charcoal/front.jpg" alt="buy-and-hold-charcoal" 
+                class="img" id="buy-and-hold-november-2021?product=212&variation=6319&size=1168" name="hoodie/buy_and_hold" aria-label="charcoal"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/hoodie/buy_and_hold/safety_orange/front.jpg" alt="buy-and-hold-safety-orange" 
+                class="img" id="buy-and-hold-november-2021?product=212&variation=5837&size=1168" name="hoodie/buy_and_hold" aria-label="safety_orange"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <!-- INTC ANALYSIS HOODIES -->
+            <div class="item">
+                <img src="./img/hoodie/intc_analysis/white/front.jpg" alt="intc-analysis-white" 
+                class="img" id="intc-analysis?product=227&variation=6083&size=1246" name="hoodie/intc_analysis" aria-label="white"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/hoodie/intc_analysis/athletic_heather/front.jpg" alt="intc-analysis-athletic-heather" 
+                class="img" id="intc-analysis?product=227&variation=2663&size=1246" name="hoodie/intc_analysis" aria-label="athletic_heather"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/hoodie/intc_analysis/true_royal/front.jpg" alt="intc-analysis-true-royal" 
+                class="img" id="intc-analysis?product=227&variation=2665&size=1246" name="hoodie/intc_analysis" aria-label="true_royal"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <!-- BUY AND HOLD TEES -->
+            <div class="item">
+                <img src="./img/tee/eco_unisex_tee/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
+                class="img" id="buy-and-hold-november-2021?product=934&variation=103881&size=4830" name="tee/eco_unisex_tee/buy_and_hold" aria-label="black"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/tee/essential_tee/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
+                class="img" id="buy-and-hold-november-2021?product=1303&variation=104485&size=5504" name="tee/eco_unisex_tee/buy_and_hold" aria-label="black"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <!-- INTC ANALYSIS TEES -->
+            <div class="item">
+                <img src="./img/tee/eco_unisex_tee/intc_analysis/white/front.jpg" alt="intc-analysis-black" 
+                class="img" id="intc-analysis?product=934&variation=103880&size=4830" name="tee/eco_unisex_tee/intc_analysis" aria-label="white"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <!-- BUY AND HOLD TOTE BAGS -->
+            <div class="item">
+                <img src="./img/accessory/organic_tote_bag/buy_and_hold/black/front.jpg" alt="buy-and-hold-black" 
+                class="img" id="buy-and-hold-november-2021?product=933&variation=103893&size=4828" name="accessory/organic_tote_bag/buy_and_hold" aria-label="black"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/accessory/organic_tote_bag/buy_and_hold/natural/front.jpg" alt="buy-and-hold-natural" 
+                class="img" id="buy-and-hold-november-2021?product=933&variation=103879&size=4828" name="accessory/organic_tote_bag/buy_and_hold" aria-label="natural"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <!-- INTC ANALYSIS TOTE BAGS -->
+            <div class="item">
+                <img src="./img/accessory/organic_tote_bag/intc_analysis/black/front.jpg" alt="intc-analysis-black" 
+                class="img" id="intc-analysis?product=933&variation=103893&size=4828" name="accessory/organic_tote_bag/intc_analysis" aria-label="black"
+                onmouseover="preview(this)"
+                onmouseout="exitPreview(this)"
+                onclick="biggerPreview(this)"
+                >
+            </div>
+            <div class="item">
+                <img src="./img/accessory/organic_tote_bag/intc_analysis/natural/front.jpg" alt="intc-analysis-natural" 
+                class="img" id="intc-analysis?product=933&variation=103879&size=4828" name="accessory/organic_tote_bag/intc_analysis" aria-label="natural"
                 onmouseover="preview(this)"
                 onmouseout="exitPreview(this)"
                 onclick="biggerPreview(this)"
