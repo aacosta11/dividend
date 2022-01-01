@@ -11,7 +11,15 @@
 
 <body>
     <style>
-        * {margin: 0; padding: 0;font-family: sans-serif;}
+        * {margin: 0; padding: 0;font-family: sans-serif; }
+        body {
+            padding: 3rem 0;
+            text-align: center;
+            /* overflow: hidden; */
+        }
+        .title {
+            margin-bottom: 3rem;
+        }
         .img {
             transition: .15s ease;
             width: 100px;
@@ -28,8 +36,8 @@
         }
         .container {
             width: auto;
-            max-width: 70vw;
             margin: 0 auto;
+            max-width: 70vw;
             -ms-display: -ms-grid;
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -40,14 +48,19 @@
             align-items: center;
             justify-content: center;
         }
-        @media only screen and (max-width: 425px) {
+        @media only screen and (max-width: 450px) {
             .container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media only screen and (min-width: 450px) and (max-width: 750px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr;
             }
         }
         .cover {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
         }
         #previewBackdrop {
             position: fixed;
@@ -77,20 +90,19 @@
             transform: scale(105%);
         }
         #exit1 {
-            width: 50px;
-            height: 50px;
             transform: rotate(45deg);
             border-right: 3px solid red;
-            border-top: 3px solid red;
             margin-left: -.75rem;
         }
         #exit2 {
-            width: 50px;
-            height: 50px;
             transform: rotate(-45deg);
             border-left: 3px solid red;
-            border-top: 3px solid red;
             margin-right: -.75rem;
+        }
+        .exit {
+            width: 50px;
+            height: 50px;
+            border-top: 3px solid red;
         }
         .flipflop {
             width: 20px;
@@ -118,6 +130,12 @@
             border-top: 10px solid blue;
             border-right: 10px solid black;
         }
+        #link:active {
+            transform: scale(120%);
+            border-top: 10px solid blue;
+            border-right: 10px solid black;
+
+        }
     </style>
     <!-- more detailed preview -->
     <div class="cover" id="previewBackdrop" style="display: none">
@@ -136,13 +154,13 @@
         </div>
         <!-- big X -->
         <div id="exitBig" onclick="exitBigPreview(this)">
-            <div id="exit1"></div>
-            <div id="exit2"></div>
+            <div id="exit1" class="exit"></div>
+            <div id="exit2" class="exit"></div>
         </div>
     </div>
     <div id="cover" class="cover">
-        <h1>Dividend Apparel Preview!</h1>
-        <p>&nbsp;</p>
+        <h1 class="title">Dividend Apparel Preview!</h1>
+        
         <div class="container">
             <!-- BUY AND HOLD HOODIES -->
             <div class="item">
